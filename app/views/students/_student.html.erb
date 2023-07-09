@@ -1,0 +1,27 @@
+<div id="<%= dom_id student %>">
+
+
+<div class="card text-center">
+  <div class="card-header">
+    <h1><%= student.first_name %> <%= student.last_name %></h1>
+    <p class="mb-0"><strong>Age:</strong><%= student.age %></p>
+  </div>
+  <div class="card-body">
+   
+    <h5 class="card-title"> <%= student.father_name %></h5>
+    <p class="card-text"><%= student.email %>  |  <%= student.phone_number %> </p>
+    <p class="m-0"><strong>Semester:</strong><%= student.semester %></p>
+    <p class="m-0"><strong>Roll no:</strong><%= student.roll_no %></p>
+
+  </div>
+  <div class="card-footer text-body-secondary">
+    <%= link_to '<i class="bi bi-pencil-square"></i>'.html_safe, edit_student_path(@student), class:'btn btn-outline-success'  %>
+    <%= link_to '<i class="bi bi-trash3"></i>'.html_safe, @student, data:{turbo_method: :delete},  class:'btn btn-outline-danger ' %>
+    <%= link_to "Back to Students", students_path, class:'btn btn-secondary' %>
+
+  </div>
+</div>
+
+  
+
+</div>
